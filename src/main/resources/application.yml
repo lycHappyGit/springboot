@@ -34,6 +34,18 @@ spring:
               config:
                   multi-statement-allow: true
 
+
+  redis:
+    host: 192.168.28.128
+    password:
+    port: 6379
+    pool:
+      max-idle: 100
+      min-idle: 1
+      max-active: 1000
+      max-wait: -1
+
+
 # Mybatis配置
 mybatis:
     mapperLocations: classpath:mapper/*.xml

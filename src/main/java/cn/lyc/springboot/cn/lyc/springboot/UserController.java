@@ -6,8 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/user")
 public class UserController
@@ -16,7 +14,7 @@ public class UserController
     private UserMapper um;
 
     @RequestMapping("/findAll")
-    public List<User> findAll(){
+    public User findAll(){
 
         User user = um.selectByPrimaryKey(1);
         return user;
