@@ -19,7 +19,7 @@ import java.lang.reflect.Method;
 
 @Configuration
 @EnableCaching
-public class RedisConfig2 extends CachingConfigurerSupport {
+public class RedisConfig extends CachingConfigurerSupport {
 
     /**
      * 生成key的策略
@@ -47,15 +47,6 @@ public class RedisConfig2 extends CachingConfigurerSupport {
     @Bean
     public CacheManager cacheManager(RedisTemplate redisTemplate) {
         RedisCacheManager rcm = new RedisCacheManager(redisTemplate);
-        return rcm;
-    }
-
-    @SuppressWarnings("rawtypes")
-    @Bean
-    public CacheManager cacheManager(RedisTemplate redisTemplate) {
-        RedisCacheManager rcm = new RedisCacheManager(redisTemplate);
-        //设置缓存过期时间
-        //rcm.setDefaultExpiration(60);//秒
         return rcm;
     }
 

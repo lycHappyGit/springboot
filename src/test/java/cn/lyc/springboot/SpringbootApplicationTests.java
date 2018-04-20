@@ -11,9 +11,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class SpringbootApplicationTests {
 
-	@Autowired
-	private UserMapper um;
-
 	@Test
 	public void contextLoads() {
 

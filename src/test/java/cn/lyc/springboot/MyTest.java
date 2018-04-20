@@ -8,7 +8,11 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.util.ResourceUtils;
 
+import java.io.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.UUID;
 
 @RunWith(SpringRunner.class)
@@ -31,6 +35,20 @@ public class MyTest {
 		System.out.println(JSON.toJSON(user));
 	}
 
+	@Test
+	public void test2() throws IOException {
+
+//		2018-02-01
+
+
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+		try {
+			simpleDateFormat.parse("2018-02-01");
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+	}
 
 	public static void main(String[] args) {
 
